@@ -205,4 +205,14 @@ public function delete($id_arsip)
         session()->setFlashdata('pesan', 'Data Berhasil dihapus !!!');
         return redirect()->to(base_url('arsip'));
     }
+
+    public function viewpdf($id_arsip)
+    {
+        $data = array(
+			'title' => 'View Arsip',
+            'arsip' => $this->Model_arsip->detail_data($id_arsip),
+			'isi'	=> 'arsip/v_viewpdf'
+		);
+		return view('layout/v_wrapper', $data);
+    }
 }
