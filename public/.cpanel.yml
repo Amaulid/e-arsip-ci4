@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/ahmadma2/public_html/
+    - /bin/cp -R e-arsip-ci4 $DEPLOYPATH
